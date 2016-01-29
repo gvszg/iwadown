@@ -1,8 +1,8 @@
 = horizontal_form_for @event do |f|
-  = f.input :category_ids, collection: Category.all, as: :grouped_select, group_method: :categories, label: "活動分類"
+  = f.association :categories, label: "活動分類", as: :check_boxes, item_wrapper_class: :inline
   = f.input :link, label: "活動連結"
   = f.input :title, label: "活動名稱"
-  = f.input :start_date_time, label: "起始日期"
-  = f.input :end_date_time, label: "結束日期"
+  = f.input :start_date_time, label: "起始日期", :input_html => {class: "datetimepicker", type: "datetime"}
+  = f.input :end_date_time, label: "結束日期", :input_html => {class: "datetimepicker"}
   = f.input :intro, label: "活動介紹", hint: "", placeholder: "", input_html: {rows: 9}, as: :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} }
   = f.button :submit, "確認送出"
