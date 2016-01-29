@@ -11,6 +11,8 @@ gem 'turbolinks'
 gem 'haml-rails'
 gem 'simple_form_bootstrap3'
 gem 'ckeditor'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development do
   gem 'better_errors'
