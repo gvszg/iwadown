@@ -16,4 +16,6 @@
 class Event < ActiveRecord::Base
   has_many :event_categories
   has_many :categories, through: :event_categories
+
+  validates_presence_of :link, :title, :start_date_time, :end_date_time, :intro
 end
