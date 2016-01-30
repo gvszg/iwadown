@@ -10,22 +10,27 @@
 /               = submit_tag("Search", class: "btn btn-default")
 
 %section#top-header.row
-  %h1.col-md-2
-    = link_to "iWadown"
-  %form.col-md-5.navbar-form(action="")
-    .form-group
-      %input.form-control(type="text" placeholder="找活動")
-    %button.btn.btn-default(type="submit") Search
-  #user_links.pull-right
-    %ul
-      %li.new-event
-        = link_to "活動", new_event_path      
-      %li.dropdown
-        %a(href="#" id="dlabel" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#")
-          Welcome, Philip J. Fry
-          %b.caret
-        %ul.dropdown-menu(role="menu" aria-labelledby="dlabel")
-          %li
-            %a(href="#") Account
-            %a(href="#") Plan and Billing
-            %a(href="#") Sign Out
+  .container
+    %h1.col-md-2
+      = link_to "iWadown"    
+    %form.col-md-5.navbar-form(action="")
+      .form-group
+        %input.form-control(type="text" placeholder="找活動")
+      %button.btn.btn-default(type="submit") Search
+    / .dropdown
+    /   %a(href="#" id="dlabel" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#")
+    /     來看活動
+    /     %b.caret
+    /     / %ul.dropdown-menu(role="menu" aria-labelledby="dlabel")
+    /     /   %li
+    /     /     %a(href="#")
+    /     /     %a(href="#")
+    /     /     %a(href="#")
+    .user-links#user_links.pull-right
+      %ul
+        %li.new-event
+          = link_to "登入"
+        %li.new-event
+          = link_to "註冊"
+        %li.new-event
+          = link_to "來辦活動", new_event_path
