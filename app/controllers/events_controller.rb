@@ -38,6 +38,10 @@ class EventsController < ApplicationController
     redirect_to events_path
   end
 
+  def search
+    redirect_to root_path
+  end
+
   private
 
   def event_params
