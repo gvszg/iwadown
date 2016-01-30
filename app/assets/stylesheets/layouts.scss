@@ -36,7 +36,7 @@ h6, .h6 {
  */
 
 section#top-header {
-  background: #b9090b;
+  background: #0088d2;
   margin: 0;
   margin-bottom: 20px;
   padding: 12px 0;
@@ -110,6 +110,9 @@ section#top-header {
   text-align: center;
   background-color: #333;
   border-top: 1px solid #e5e5e5;
+  .logo-bottom a {
+    color: #fff;
+  }
 }
 .iwadown-footer p:last-child {
   margin-bottom: 0;
@@ -119,4 +122,3 @@ section#top-header {
 /*
  * Search Form
  */
-
