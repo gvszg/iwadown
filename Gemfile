@@ -13,6 +13,8 @@ gem 'simple_form_bootstrap3'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
+gem "koala", "~> 2.2"
+gem "js_info"
 
 group :development do
   gem 'better_errors'
