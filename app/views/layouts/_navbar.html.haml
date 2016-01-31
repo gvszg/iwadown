@@ -26,11 +26,20 @@
     /     /     %a(href="#")
     /     /     %a(href="#")
     /     /     %a(href="#")
-    .user-links#user_links.pull-right
+    .user-links#user_links.pull-right      
       %ul
-        %li.new-event
-          = link_to "登入"
-        %li.new-event
-          = link_to "註冊"
+        - if logged_in?          
+          %li.dropdown
+            %a(href="#" id="dlabel" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#")
+              Welcome, #{current_user.username}
+              %b.caret
+            %ul.dropdown-menu(role="menu" aria-labelledby="dlabel")
+              %li
+                = link_to "登出", logout_path, method: :delete
+        - else
+          %li.new-event
+            = link_to "登入"
+          %li.new-event
+            = link_to "註冊"
         %li.new-event
           = link_to "來辦活動", new_event_path

@@ -18,7 +18,10 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   # Facebook Authentication
-  get '/my_profile', to: 'users#index'
-  get 'auth/facebook', as: "auth_provider"
-  get 'auth/facebook/callback', to: 'users#login'
+  # get '/my_profile', to: 'users#index'
+  # get 'auth/facebook', as: "auth_provider"
+  # get 'auth/facebook/callback', to: 'users#login'
+
+  get '/auth/:provider/callback', to:'sessions#fb_signin'
+  get '/auth/failure', to: redirect('/')
 end
