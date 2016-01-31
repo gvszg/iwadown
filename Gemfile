@@ -14,6 +14,7 @@ gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
 gem "koala", "~> 2.2"
+gem 'omniauth-facebook'
 gem "js_info"
 
 group :development do

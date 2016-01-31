@@ -79,6 +79,7 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    hashie (3.4.3)
     hike (1.2.3)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
@@ -92,6 +93,7 @@ GEM
     js_info (0.1.1)
       actionpack (>= 3.0.0)
     json (1.8.3)
+    jwt (1.5.1)
     koala (2.2.0)
       addressable
       faraday
@@ -108,10 +110,25 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
+    multi_xml (0.5.5)
     multipart-post (2.0.0)
     mysql2 (0.3.20)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    oauth2 (1.1.0)
+      faraday (>= 0.8, < 0.10)
+      jwt (~> 1.0, < 1.5.2)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
+    omniauth (1.3.1)
+      hashie (>= 1.2, < 4)
+      rack (>= 1.0, < 3)
+    omniauth-facebook (3.0.0)
+      omniauth-oauth2 (~> 1.2)
+    omniauth-oauth2 (1.4.0)
+      oauth2 (~> 1.0)
+      omniauth (~> 1.2)
     orm_adapter (0.5.0)
     polyglot (0.3.5)
     rack (1.5.5)
@@ -191,6 +208,7 @@ DEPENDENCIES
   meta_request
   mini_magick
   mysql2 (~> 0.3.18)
+  omniauth-facebook
   rails (= 4.1.1)
   sass-rails (~> 4.0.3)
   simple_form_bootstrap3
