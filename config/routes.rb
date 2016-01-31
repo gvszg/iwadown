@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   # Facebook Authentication
-  get '/my_profile' to: 'users#index'
+  get '/my_profile', to: 'users#index'
   get 'auth/facebook', as: "auth_provider"
   get 'auth/facebook/callback', to: 'users#login'
 end
