@@ -16,6 +16,8 @@ gem 'mini_magick'
 gem "koala", "~> 2.2"
 gem 'omniauth-facebook'
 gem "js_info"
+gem "figaro"
+gem "bcrypt"
 
 group :development do
   gem 'better_errors'

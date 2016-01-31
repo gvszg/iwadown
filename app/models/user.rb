@@ -16,7 +16,10 @@
 #
 
 class User < ActiveRecord::Base
+  has_secure_password
   has_many :events
+
+  validates_presence_of :email, :password, :username
   
   def self.koala(auth)
     access_token = auth['token']
