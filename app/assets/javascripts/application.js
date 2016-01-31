@@ -1,7 +1,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require jquery.datetimepicker.min
+//= require ckeditor/init
+//= require jquery.datetimepicker
 //= require turbolinks
 //= require_tree .
 
@@ -28,19 +29,19 @@ $(function(){
 
 
 
-Date.parseDate = function( input, format ){
-  // you code for convert string to date object
-  // simplest variant - use native Date.parse, not given format parametr
-return Date.parse(input);
-};
-Date.prototype.dateFormat = function( format ){
-  //you code for convert date object to format string
-  //for example
-  switch( format ){
-    case 'd': return this.getDate();
-    case 'H:i:s': return this.getHours()+':'+this.getMinutes()+':'+this.getSeconds();
-    case 'h:i a': return ((this.getHours() %12) ? this.getHours() % 12 : 12)+':'+this.getMinutes()+(this.getHours() < 12 ? 'am' : 'pm');
-  }
-  // or default format
-  return this.getDate()+'.'+(this.getMonth()+ 1)+'.'+this.getFullYear();
-};
+// Date.parseDate = function( input, format ){
+//   // you code for convert string to date object
+//   // simplest variant - use native Date.parse, not given format parametr
+// return Date.parse(input);
+// };
+// Date.prototype.dateFormat = function( format ){
+//   //you code for convert date object to format string
+//   //for example
+//   switch( format ){
+//     case 'd': return this.getDate();
+//     case 'H:i:s': return this.getHours()+':'+this.getMinutes()+':'+this.getSeconds();
+//     case 'h:i a': return ((this.getHours() %12) ? this.getHours() % 12 : 12)+':'+this.getMinutes()+(this.getHours() < 12 ? 'am' : 'pm');
+//   }
+//   // or default format
+//   return this.getDate()+'.'+(this.getMonth()+ 1)+'.'+this.getFullYear();
+// };

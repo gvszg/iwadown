@@ -46,6 +46,9 @@ section#top-header {
   }
   h1 {
     font-size: 20px;
+    .col-md-2 {
+      width: initial;
+    }
   }
   > ul {
     padding-top: 12px;
@@ -75,7 +78,7 @@ section#top-header {
     > ul {
       > li {
         float: left;
-        width: 200px;
+        /*width: 200px;*/
         a {
           margin: 0 10px;
           b {
@@ -120,5 +123,7 @@ section#top-header {
 
 
 /*
- * Search Form
+ * Public Page
  */
+
+ 

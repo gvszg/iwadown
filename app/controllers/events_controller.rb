@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :find_event, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, only: [:new, :create, :edit, :update, :destroy]
   
   def index
     @event = Event.all.order("created_at DESC")
@@ -16,7 +17,8 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
 
     if @event.save!
-      redirect_to events_path
+      # redirect_to events_path
+      js_alert("hahahhahah", events_path)
     else
       render :new
     end
@@ -45,7 +47,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:link, :title, :star_date_time, :end_date_time, :intro)
+    params.require(:event).permit(:link, :title, :start_date_time, :end_date_time, :intro)
   end
 
   def find_event
