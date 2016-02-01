@@ -20,3 +20,4 @@
 /config/facebook.yml
 # Ignore application configuration
 /config/application.yml
+/public/uploads
